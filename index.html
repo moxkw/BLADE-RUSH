@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0d0b12"><title>Blade Rush: Shadow Arena</title>
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div id="touch"><div id="stick"><i id="knob"></i></div>
+<b class="btn" data-k="atk" id="bA">CHÉM</b><b class="btn sm" data-k="dodge" id="bD">NÉ</b><b class="btn sm" data-k="skill" id="bS">XOÁY</b><b class="btn sm" data-k="fire" id="bF">PHI KIẾM</b><b class="btn sm" data-k="shd" id="bH">KHIÊN</b></div>
+<button id="helpGame" aria-label="Hướng dẫn">?</button><button id="pauseBtn" aria-label="Tạm dừng">II</button>
+<div id="toast"></div>
+<section id="menu" class="ov show"><h1>BLADE RUSH</h1><h2>SHADOW ARENA</h2>
+<button id="play" class="big">▶ PLAY</button>
+<div class="row"><button id="helpBtn">Hướng dẫn</button><button id="sndBtn">Âm thanh: Bật</button><button id="fxBtn">Hiệu ứng: Đầy đủ</button></div>
+<p class="hint">🎮 Kết nối tay cầm Bluetooth rồi bấm một nút bất kỳ để nhận diện.</p><p id="best" class="hint"></p></section>
+<section id="stages" class="ov"><h2>Chọn cảnh</h2><div id="stageGrid"></div><button class="home">Về menu</button></section>
+<section id="help" class="ov"><h2>Điều khiển</h2>
+<p><b>Chọn 1 trong 5 cảnh, mỗi cảnh có một trùm lớn với kỹ năng riêng. Hạ hết các đợt để thắng cảnh.</b></p><p>Cảm ứng: joystick trái để di chuyển · CHÉM (giữ để chém liên tục) · NÉ · XOÁY (diện rộng) · PHI KIẾM (3 kiếm xuyên) · KHIÊN (bất tử 3s, hồi 15 máu)</p>
+<p>Tay cầm: Stick/D-pad di chuyển · A chém · B né · X xoáy · Y phi kiếm · R1/L1 khiên · Start tạm dừng</p>
+<p>Bàn phím: WASD/mũi tên · J/Space chém · K/Shift né · L/E xoáy · U phi kiếm · O khiên · P/Esc tạm dừng</p>
+<p>Dưới thanh máu: 🌀 Xoáy · 💨 Né · 🗡️ Phi kiếm · 🛡️ Khiên. Số trên biểu tượng là giây hồi chiêu.</p><h2>Quái vật</h2><div id="mon"><h3>Quái thường</h3><div><i style="background:#e8e4d4"></i><b>Bộ xương</b>: Đi chậm, máu thấp, xuất hiện đông.</div><div><i style="background:#6b3a99"></i><b>Quái bóng tối</b>: Nhanh, máu thấp, hay lao sát người chơi.</div><div><i style="background:#c0392b"></i><b>Chiến binh</b>: Máu và sát thương cao hơn, có mặt ở các đợt sau.</div><div><i style="background:#d4a017"></i><b>Tinh anh (viền vàng)</b>: To, rất trâu. Chắc chắn rơi tim hồi máu.</div><h3>Trùm</h3><div><i style="background:#e8e4d4"></i><b>Xương Vương</b>: Triệu hồi 3 bộ xương, lao thẳng vào bạn (có vạch đỏ báo trước).</div><div><i style="background:#8e44ad"></i><b>Bóng Ma</b>: Dịch chuyển sát bạn rồi bắn vòng đạn tím.</div><div><i style="background:#e67e22"></i><b>Hỏa Thần</b>: Bắn quạt 5 cầu lửa, đập đất: thấy vòng đỏ lớn thì chạy ra ngoài.</div><div><i style="background:#5dade2"></i><b>Băng Hậu</b>: Bắn đạn băng xoắn ốc, vòng đạn chậm.</div><h3>Trùm cuối</h3><div><i style="background:#7a0f1e"></i><b>Ma Vương</b>: Dùng mọi chiêu của các trùm, ra chiêu nhanh hơn khi dưới nửa máu.</div></div>
+<button class="back">Quay lại</button></section>
+<section id="pause" class="ov"><h2>Tạm dừng</h2><button id="resume" class="big">Tiếp tục</button>
+<div class="row"><button id="restart1">Chơi lại</button><button id="helpP">Hướng dẫn</button><button id="snd2">Âm thanh</button><button class="home">Về menu</button></div></section>
+<section id="over" class="ov"><h2 id="overT">Bạn đã gục ngã</h2><p id="stats"></p>
+<div class="row"><button id="restart2" class="big">Chơi lại</button><button id="nextStage">Cảnh tiếp ▶</button><button id="stagesBtn2">Chọn cảnh</button><button class="home">Về menu</button></div></section>
+<div id="rot"><p>↻ Hãy xoay ngang iPhone để chơi</p></div>
+<script src="game.js"></script></body></html>
